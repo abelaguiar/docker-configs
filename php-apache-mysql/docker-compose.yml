@@ -14,5 +14,6 @@ services:
   database:
     image: mysql:5.7
     environment:
-      - MYSQL_ROOT_PASSWORD=polyclinic@152
-      - MYSQL_DATABASE=polyclinic
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=personal_db
