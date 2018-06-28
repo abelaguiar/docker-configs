@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  app:
+    build:
+      context: ./docker/app
+    volumes:
+     - .:/var/www/html
+    ports:
+      - 8080:80
+    depends_on:
+      - database
+
+  database:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=polyclinic@152
+      - MYSQL_DATABASE=polyclinic
